@@ -1,0 +1,4 @@
+
+1. Main homepage - ask a question, login, see all questions
+2. Answers Page - View answers, submit answer, back button to go to main homepage
+3. Users Page

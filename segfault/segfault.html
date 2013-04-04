@@ -1,0 +1,80 @@
+<head>
+  <title>segfault</title>
+</head>
+
+
+<body>
+  {{> main}}
+</body>
+
+<template name="main">
+    {{> hello}}
+    {{#if isMain}}
+      {{> questionsList}}
+    {{else}}
+      {{> questionPage}}
+    {{/if}}
+  </template>
+
+<template name="questionPage">
+  Single question goes here
+    {{> question oneQuestion}}
+</template>
+
+<template name="question">
+  <div class="question {{selected}}">
+    <span class="votes">{{votes}}</span>
+    <span class="title">{{title}}</span>
+    <span class="asker">{{askerName}}</span>
+    {{#if selected}}
+      {{> details}}
+    {{/if}}
+  </div>
+</template>
+
+<template name="hello">
+  <h1 class="center">Welcome to SegFault!</h1>
+  <div class="topContainer">
+    <div class="userManagement">
+      <h3>Welcome {{current_user}}</h3>
+      <h3>Enter your name</h3>
+      <input type="text" class="currentUser" />
+      <input type="button" value="Submit" class="submitBtn" />
+      <input type="button" value="Logout" class="logoutBtn" />
+    </div>
+    <div class="askingQuestions">
+      <h3>Ask a question</h3>
+      <input type="text" class="questionTitle" />
+      <textarea class="questionBody" />
+      <input type="button" value="Ask" class="askQuestionBtn" />
+    </div>
+  </div>
+</template>
+
+<template name="questionsList">
+  <div class="questionList">
+    <h1 class="center">Questions</h1>
+      {{#each questions}}
+      <div class="question">
+        {{> question}}
+      </div>
+      {{/each}}
+  </div>
+</template>
+
+<template name="details">
+  <br/>
+  <input type="button" class="answerBtn" value="Answer" />
+  <input type="button" class="voteUpBtn" value="Vote Up" />
+  <input type="button" class="voteDownBtn" value="Vote Down" />
+  <span class="questionText">{{text}}</span>
+  <span>{{answering}}</span>
+  {{#if answering}}
+    {{> answer}}
+  {{/if}}
+</template>
+
+<template name="answer">
+  <textarea class="answerQuestionInput" />
+</template>
+

@@ -1,0 +1,107 @@
+/* CSS declarations go here */
+.center {
+  text-align:center;
+}
+
+.questionList {
+  clear: both;
+  position: relative;
+  background: wheat;
+  width: 800px;
+  padding: 10px 0;
+  margin: 20px auto 0;
+}
+
+.asker {
+  color: black;
+  font-style: italic;
+  margin-left: 20px;
+}
+
+.votes {
+  font-weight: bold;
+  float: left;
+  margin-left: 15px;
+}
+
+.title {
+  position: absolute;
+  left: 200px;
+}
+
+.userManagement {
+ width: 50%;
+ float: left;
+ text-align: center;
+}
+
+
+.askingQuestions {
+  position: relative;
+  width: 50%;
+  height: 150px;
+  float: left;
+  text-align: center;
+}
+
+.askingQuestions h3 {
+  position: absolute;
+  left: 185px;
+  top: 10px;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.questionTitle {
+  position: absolute;
+  top: 35px;
+  left: 150px;
+  width: 200px;
+}
+
+.questionBody {
+   position: absolute;
+   top: 60px;
+   left: 150px;
+   width: 200px;
+   height: 70px;
+}
+
+.askQuestionBtn {
+   position: absolute;
+   left: 320px;
+   top: 10px;
+}
+
+.answerBtn {
+  float: right;
+  margin-right: 30px;
+}
+
+.title {
+  font-weight: bold;
+}
+.questionText {
+  margin-left: 200px;
+}
+
+.question {
+  padding: 3px 0;
+}
+
+.topContainer {
+  margin: 10px 0;
+}
+
+.selected {
+  background: yellow;
+  padding: 10px 0;
+}
+
+.answerQuestionInput {
+  margin: 10px 20px;
+  width: 600px;
+  max-width: 760px;
+  height: 150px;
+}
